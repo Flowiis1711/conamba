@@ -1,0 +1,14 @@
+---
+const { title, items, icon} = Astro.props;
+---
+
+<div class="flex gap-[3rem]">
+  <i class:list={["text-[5rem] text-[#a6e39d] w-[20%] self-end", icon]}
+  ></i>
+  <div class="text-white w-[80%]">
+    <h4 class="p-0 m-[1rem_0] text-[1.6em] uppercase">{title}</h4>
+    <ul class="list-disc p-0 m-0 text-[1.2em]">
+      {items.map((item: string) => <li>{item}</li>)}
+    </ul>
+  </div>
+</div>

@@ -1,21 +1,120 @@
 ---
 import Nav from "@components/Nav.astro";
+import Service from "@components/Service.astro";
 import Layout from "@layouts/Layout.astro";
+
+const SERVICES_FIRST_COL = [
+  {
+    title: "Certificados",
+    items: [
+      "Informe de evaluación del edificio (ITE/IEE)",
+      "Certificados energéticos",
+      "Cédulas de habitabilidad",
+    ],
+    icon: "fa-solid fa-certificate",
+  },
+];
+
+const SERVICES_SECOND_COL = [
+  {
+    title: "Informes",
+    items: [
+      "Informe para la solicitud de los Fondos Next Generation Programa 3 PRTR.",
+      "Ayudas para actuaciones de rehabilitación a nivel de edificio.",
+      "Mediciones y presupuestos",
+      "Levantamientos sobre el estado actual",
+    ],
+    icon: "fa-solid fa-file",
+  },
+];
 ---
 
 <Layout
   title="Conamba - Aparejadores"
   description="Conamba - Consultores Ambientales de Baleares - Aparejadores"
 >
-  <nav class="bg-[url('./header-img.jpeg')] bg-no-repeat bg-cover min-h-screen w-full">  
+  <nav
+    class="bg-[url('/header-img.jpeg')] bg-no-repeat bg-cover min-h-screen w-full"
+  >
     <Nav />
     <div class="flex flex-col items-center text-white font-bold mt-20">
-      <h1 class="text-5xl mt-12 mb-0 md:text-7xl">CONAMBA</h1>
-      <h2 class="text-3xl mt-2 md:text-5xl">APAREJADORES</h2>
-      <i class="fa-solid fa-arrow-down mt-72 text-[1.8em] opacity-80 cursor-pointer hover:opacity-100"></i>
+      <h1 class="text-5xl mt-12 mb-0 md:text-7xl uppercase">Conamba</h1>
+      <h2 class="text-3xl mt-2 md:text-5xl uppercase">Aparejadores</h2>
+      <a href="/#services"
+        ><i
+          class="fa-solid fa-arrow-down mt-64 text-[1.8em] opacity-80 cursor-pointer hover:opacity-100"
+        ></i></a
+      >
     </div>
   </nav>
-  <main></main>
+  <main>
+    <section
+      id="services"
+      class="w-[80%] mx-auto flex flex-col gap-[5rem] p-[3rem_2rem] max-w-[1600px]"
+    >
+      <h2 class="section-title">Nuestros servicios</h2>
+      <div class="flex flex-wrap gap-[5rem] items-center">
+        <div class="flex flex-col gap-[3rem] flex-1">
+          {
+            SERVICES_FIRST_COL.map((service) => {
+              return (
+                <Service
+                  title={service.title}
+                  items={service.items}
+                  icon={service.icon}
+                />
+              );
+            })
+          }
+        </div>
+        <div class="flex flex-col gap-[3rem] flex-1">
+          {
+            SERVICES_SECOND_COL.map((service) => {
+              return (
+                <Service
+                  title={service.title}
+                  items={service.items}
+                  icon={service.icon}
+                />
+              );
+            })
+          }
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
 
-<style></style>
+<style>
+  .section-title {
+    color: white;
+    margin: 0;
+    font-size: 2.8rem;
+    width: 90%;
+    max-width: 390px;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  .section-title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20%;
+    margin-top: -1rem;
+    border-width: 3px 3px 0;
+    border-style: solid;
+    border-color: #a6e39d transparent;
+  }
+
+  .section-title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin-top: 1rem;
+    border-width: 3px 3px 0;
+    border-style: solid;
+    border-color: #a6e39d transparent;
+  }
+</style>
