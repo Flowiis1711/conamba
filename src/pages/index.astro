@@ -46,7 +46,11 @@ const projects = await getCollection("projects");
     <h1 class="mt-12 text-7xl text-white uppercase">Conamba</h1>
     <h2 class="text-4xl text-white uppercase">Aparejadores</h2>
   </header>
-  <Section id="services" title="Nuestros servicios">
+  <Section
+    id="services"
+    title="Nuestros servicios"
+    styleClass="flex-col px-0 md:p-[3rem_2rem]"
+  >
     <div class="flex flex-wrap gap-[5rem] items-center">
       <div class="flex flex-col gap-[3rem] flex-1">
         {
@@ -79,7 +83,11 @@ const projects = await getCollection("projects");
   <Parallax
     imageBackground="bg-[url(/projects/5-star-hotel-rehab/IMG_5020.JPG)]"
   />
-  <Section id="projects" title="Nuestros últimos proyectos">
+  <Section
+    id="projects"
+    title="Nuestros últimos proyectos"
+    styleClass="flex-col px-0 md:p-[3rem_2rem]"
+  >
     <div class="w-full flex flex-wrap justify-between gap-8">
       {
         projects.map((project, index) => {
@@ -98,11 +106,26 @@ const projects = await getCollection("projects");
         })
       }
     </div>
-    <button class="max-w-[200px] bg-transparent text-white font-bold py-2 px-5 border-2 border-customGreen w-[90%] mx-auto text-[1.3em] cursor-pointer hover:bg-customGreen hover:text-black">VER MÁS</button>
+    <button
+      class="max-w-[200px] bg-transparent text-white font-bold py-2 px-5 border-2 border-customGreen w-[90%] mx-auto text-[1.3em] cursor-pointer hover:bg-customGreen hover:text-black"
+      >VER MÁS</button
+    >
   </Section>
   <Parallax
     imageBackground="bg-[url(/projects/5-star-hotel-rehab/IMG_5126.JPG)]"
   />
+  <Section id="contact" title="Contáctanos" styleClass="flex-col md:flex-row p-3">
+    <div class="flex flex-col text-xl gap-[1.5rem] text-white">
+      <span>
+        Para cualquier consulta, petición o solicitud de presupuesto de
+        honorarios, puede contactarme a través del correo electrónico o número
+        de teléfono:
+      </span>
+      <span> conamba.aparejadores@gmail.com </span>
+      <span> 630 360 927 </span>
+      <span> Disponibilidad por toda la isla de Mallorca. </span>
+    </div>
+  </Section>
   <footer class="bg-customGreen w-full p-6 text-center mt-auto font-semibold">
     CONAMBA - APAREJADORES
   </footer>

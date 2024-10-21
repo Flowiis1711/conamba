@@ -1,9 +1,9 @@
 ---
-const { title, id } = Astro.props;
+const { title, id, styleClass} = Astro.props;
 ---
 <section
   id={id}
-  class="w-[80%] mx-auto flex flex-col gap-[5rem] max-w-[1600px] py-[3rem] px-0 md:p-[3rem_2rem]"
+  class:list={["w-[80%] mx-auto flex gap-[5rem] max-w-[1600px] py-[3rem]", styleClass]}
 >
   <h2 class="section-title">{ title }</h2>
   <slot />
