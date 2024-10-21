@@ -1,14 +1,21 @@
 ---
-title: "16 Viviendas unifamiliares pareadas, viviendas prefabricadas"  # Opcional, si deseas un título
-location: "C/ del Ropit Nº1-7, C/ de l’Oronella Nº2-8 y C/ del Falcó, Llucmajor"
+title: 16 Viviendas unifamiliares pareadas, viviendas prefabricadas
+location: C/ del Ropit Nº1-7, C/ de l’Oronella Nº2-8 y C/ del Falcó, Llucmajor
 startYear: 2022
 endYear: 2024
-sponsor: "AEDAS HOMES"
-mainImage: /single-house-pool/IMG_4938.JPG
+sponsor: AEDAS HOMES
+mainImage: 
+  url: /16-semi-detached/IMG_20220706_103344.jpg
+  description: ""
 images:
-  - /single-house-pool/IMG_4938.JPG
-  - /single-house-pool/IMG_20230418_091945.jpg
-  - /single-house-pool/IMG_20230822_090156.jpg
-  - /single-house-pool/IMG_20230905_093712.jpg
-  - /single-house-pool/IMG_20231107_092353.jpg
+  - url: /16-semi-detached/IMG_20220706_103344.jpg
+    description: ""
+  - url: /16-semi-detached/IMG_20220713_094334.jpg
+    description: ""
+  - url: /16-semi-detached/IMG_20220727_180938.jpg
+    description: ""
+  - url: /16-semi-detached/IMG_20231121_092020.jpg
+    description: ""
+  - url: /16-semi-detached/IMG_20231121_093559.jpg
+    description: ""
 ---

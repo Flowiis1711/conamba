@@ -1,0 +1,44 @@
+---
+const { title, id } = Astro.props;
+---
+<section
+  id={id}
+  class="w-[80%] mx-auto flex flex-col gap-[5rem] max-w-[1600px] py-[3rem] px-0 md:p-[3rem_2rem]"
+>
+  <h2 class="section-title">{ title }</h2>
+  <slot />
+</section>
+
+<style>
+    .section-title {
+      color: white;
+      margin: 0;
+      font-size: 2.8rem;
+      width: 90%;
+      max-width: 390px;
+      position: relative;
+      text-transform: uppercase;
+    }
+  
+    .section-title::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 20%;
+      margin-top: -1rem;
+      border-width: 3px 3px 0;
+      border-style: solid;
+      border-color: #a6e39d transparent;
+    }
+  
+    .section-title::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      margin-top: 1rem;
+      border-width: 3px 3px 0;
+      border-style: solid;
+      border-color: #a6e39d transparent;
+    }
+  </style>

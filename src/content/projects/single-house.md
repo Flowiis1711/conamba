@@ -1,14 +1,21 @@
 ---
-title: "Vivienda unifamiliar aislada"  # Opcional, si deseas un título
-location: "C/ San Bartolomé, Nº2, Cas Català"
+title: Vivienda unifamiliar aislada
+location: C/ San Bartolomé, Nº2, Cas Català
 startYear: 2022
 endYear: 2023
-sponsor: "Cappuccino"
-mainImage: 16-semi-detached/IMG_20220706_103344.jpg
+sponsor: Cappuccino
+mainImage: 
+  url: /single-house/IMG_4847.JPG
+  description: ""
 images:
-  - /16-semi-detached/IMG_20220706_103344.jpg
-  - /16-semi-detached/IMG_20220713_094334.jpg
-  - /16-semi-detached/IMG_20220727_180938.jpg
-  - /16-semi-detached/IMG_20231121_092020.jpg
-  - /16-semi-detached/IMG_20231121_093559.jpg
+  - url: /single-house/IMG_4847.JPG
+    description: ""
+  - url: /single-house/IMG_20230221_114745.jpg
+    description: ""
+  - url: /single-house/IMG_20230502_105954.jpg
+    description: ""
+  - url: /single-house/IMG_20230926_112850.jpg
+    description: ""
+  - url: /single-house/IMG_20230926_114638.jpg
+    description: ""
 ---

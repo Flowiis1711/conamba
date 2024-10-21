@@ -1,7 +1,11 @@
 ---
 import Nav from "@components/Nav.astro";
+import Parallax from "@components/Parallax.astro";
+import Project from "@components/Project.astro";
+import Section from "@components/Section.astro";
 import Service from "@components/Service.astro";
 import Layout from "@layouts/Layout.astro";
+import { getCollection } from "astro:content";
 
 const SERVICES_FIRST_COL = [
   {
@@ -27,94 +31,79 @@ const SERVICES_SECOND_COL = [
     icon: "fa-solid fa-file",
   },
 ];
+
+const projects = await getCollection("projects");
 ---
 
 <Layout
   title="Conamba - Aparejadores"
   description="Conamba - Consultores Ambientales de Baleares - Aparejadores"
 >
-  <nav
-    class="bg-[url('/header-img.jpeg')] bg-no-repeat bg-cover min-h-screen w-full"
+  <header
+    class="flex flex-col items-center h-screen w-full bg-[url('/header-img.jpeg')] bg-no-repeat bg-right bg-cover bg-fixed"
   >
     <Nav />
-    <div class="flex flex-col items-center text-white font-bold mt-20">
-      <h1 class="text-5xl mt-12 mb-0 md:text-7xl uppercase">Conamba</h1>
-      <h2 class="text-3xl mt-2 md:text-5xl uppercase">Aparejadores</h2>
-      <a href="/#services"
-        ><i
-          class="fa-solid fa-arrow-down mt-64 text-[1.8em] opacity-80 cursor-pointer hover:opacity-100"
-        ></i></a
-      >
-    </div>
-  </nav>
-  <main>
-    <section
-      id="services"
-      class="w-[80%] mx-auto flex flex-col gap-[5rem] p-[3rem_2rem] max-w-[1600px]"
-    >
-      <h2 class="section-title">Nuestros servicios</h2>
-      <div class="flex flex-wrap gap-[5rem] items-center">
-        <div class="flex flex-col gap-[3rem] flex-1">
-          {
-            SERVICES_FIRST_COL.map((service) => {
-              return (
-                <Service
-                  title={service.title}
-                  items={service.items}
-                  icon={service.icon}
-                />
-              );
-            })
-          }
-        </div>
-        <div class="flex flex-col gap-[3rem] flex-1">
-          {
-            SERVICES_SECOND_COL.map((service) => {
-              return (
-                <Service
-                  title={service.title}
-                  items={service.items}
-                  icon={service.icon}
-                />
-              );
-            })
-          }
-        </div>
+    <h1 class="mt-12 text-7xl text-white uppercase">Conamba</h1>
+    <h2 class="text-4xl text-white uppercase">Aparejadores</h2>
+  </header>
+  <Section id="services" title="Nuestros servicios">
+    <div class="flex flex-wrap gap-[5rem] items-center">
+      <div class="flex flex-col gap-[3rem] flex-1">
+        {
+          SERVICES_FIRST_COL.map((service) => {
+            return (
+              <Service
+                title={service.title}
+                items={service.items}
+                icon={service.icon}
+              />
+            );
+          })
+        }
       </div>
-    </section>
-  </main>
+      <div class="flex flex-col gap-[3rem] flex-1">
+        {
+          SERVICES_SECOND_COL.map((service) => {
+            return (
+              <Service
+                title={service.title}
+                items={service.items}
+                icon={service.icon}
+              />
+            );
+          })
+        }
+      </div>
+    </div>
+  </Section>
+  <Parallax
+    imageBackground="bg-[url(/projects/5-star-hotel-rehab/IMG_5020.JPG)]"
+  />
+  <Section id="projects" title="Nuestros últimos proyectos">
+    <div class="w-full flex flex-wrap justify-between gap-8">
+      {
+        projects.map((project, index) => {
+          const { slug, data } = project;
+          const { title, mainImage } = data;
+          if (index < 3) {
+            return (
+              <Project
+                name={title}
+                img={mainImage.url}
+                altImg={mainImage.description}
+                slug={slug}
+              />
+            );
+          }
+        })
+      }
+    </div>
+    <button class="max-w-[200px] bg-transparent text-white font-bold py-2 px-5 border-2 border-customGreen w-[90%] mx-auto text-[1.3em] cursor-pointer hover:bg-customGreen hover:text-black">VER MÁS</button>
+  </Section>
+  <Parallax
+    imageBackground="bg-[url(/projects/5-star-hotel-rehab/IMG_5126.JPG)]"
+  />
+  <footer class="bg-customGreen w-full p-6 text-center mt-auto font-semibold">
+    CONAMBA - APAREJADORES
+  </footer>
 </Layout>
-
-<style>
-  .section-title {
-    color: white;
-    margin: 0;
-    font-size: 2.8rem;
-    width: 90%;
-    max-width: 390px;
-    position: relative;
-    text-transform: uppercase;
-  }
-
-  .section-title::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 20%;
-    margin-top: -1rem;
-    border-width: 3px 3px 0;
-    border-style: solid;
-    border-color: #a6e39d transparent;
-  }
-
-  .section-title::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    margin-top: 1rem;
-    border-width: 3px 3px 0;
-    border-style: solid;
-    border-color: #a6e39d transparent;
-  }
-</style>
