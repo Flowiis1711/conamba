@@ -1,0 +1,84 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import Nav from "@components/Nav.astro";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((project) => ({
+    params: { id: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { data } = project;
+const { title, location, startYear, endYear, sponsor, images, mainImage } =
+  data;
+---
+
+<Layout
+  title={`${title} - Proyectos Conamba`}
+  description={`Detalle del proyecto ${title}`}
+>
+  <Nav />
+  <div
+    class="bg-white py-4 px-2 w-11/12 m-auto my-20 max-w-screen-lg md:w-10/12 md:py-[4rem] px-[2rem]"
+  >
+    <div class="m-auto w-11/12 flex flex-col md:w-[10/12]">
+      <h1 class="text-xl font-semibold uppercase mb-[2rem] md:text-2xl">{title}</h1>
+      <div class="flex gap-2 text-lg">
+        <span class="font-semibold">Ubicación: </span>
+        <span>{location}</span>
+      </div>
+      <div class="flex gap-2 text-lg">
+        <span class="font-semibold">Año inicio: </span>
+        <span>{startYear}</span>
+      </div>
+      <div class="flex gap-2 text-lg">
+        <span class="font-semibold">Año finalización: </span>
+        <span>{endYear}</span>
+      </div>
+      <div class="flex gap-2 text-lg">
+        <span class="font-semibold">Patrocinador: </span>
+        <span>{sponsor}</span>
+      </div>
+      <section
+        class="splide w-full mx-auto mt-[2rem] md:mt-[3rem]"
+        aria-label="Galería imágenes"
+      >
+        <div class="splide__track">
+          <ul class="splide__list gap-2">
+            {
+              images.map((image) => {
+                return (
+                  <li class="splide__slide">
+                    <img class="h-full cover" src={`/projects${image.url}`} />
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div
+    class="w-full absolute bottom-0 left-0 h-3/6 -z-10"
+    style={`background-image:url('./${mainImage.url}'); background-size: cover;`}
+  >
+  </div>
+</Layout>
+
+<script>
+  import "@splidejs/splide/css";
+  import Splide from "@splidejs/splide";
+
+  var splide = new Splide(".splide", {
+    perMove: 1,
+    perPage: 2,
+    drag: true,
+    rewind: true,
+  });
+  splide.mount();
+</script>

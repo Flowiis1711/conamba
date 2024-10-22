@@ -1,0 +1,38 @@
+---
+import Nav from "@components/Nav.astro";
+import Project from "@components/Project.astro";
+import Section from "@components/Section.astro";
+import Layout from "@layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+---
+
+<Layout
+  title="Proyectos Conamba - Aparejadores"
+  description="Conamba - Consultores Ambientales de Baleares - Aparejadores. Consulta todos los proyectos en los que hemos participado."
+>
+  <Nav />
+  <Section
+    id="projects"
+    title="Nuestros últimos proyectos"
+    styleClass="flex-col px-0 py-[7rem]"
+  >
+    <div class="w-full flex flex-wrap justify-between gap-8">
+      {
+        projects.map((project) => {
+          const { slug, data } = project;
+          const { title, mainImage } = data;
+          return (
+            <Project
+              name={title}
+              img={mainImage.url}
+              altImg={mainImage.description}
+              slug={slug}
+            />
+          );
+        })
+      }
+    </div>
+  </Section>
+</Layout>

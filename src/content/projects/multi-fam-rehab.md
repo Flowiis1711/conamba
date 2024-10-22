@@ -16,6 +16,6 @@ images:
     description: ""
   - url: /multi-fam-rehab/IMG_20220816_104253.JPG
     description: ""
-  - url: /multi-fam-rehab/IMG_20221020114550.JPG
+  - url: /multi-fam-rehab/IMG_20221020_114550.JPG
     description: ""
 ---
