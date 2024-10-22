@@ -3,7 +3,7 @@ const { name, img, altImg, slug } = Astro.props;
 ---
 
 <div class="project relative cursor-pointer w-[100%] md:w-[30%]">
-  <img class="project-img" src={`/projects${img}`} alt={altImg} />
+  <img transition:name={`img-${slug}`} class="project-img" src={`/projects${img}`} alt={altImg} />
   <a class="project-name text-3xl md:text-xl lg:text-3xl" href={`projects/${slug}`} class="text-center">{name}</a
   >
 </div>

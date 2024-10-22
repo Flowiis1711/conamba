@@ -17,19 +17,47 @@ const SERVICES_FIRST_COL = [
     ],
     icon: "fa-solid fa-certificate",
   },
+  {
+    title: "Proyectos",
+    items: [
+      "Reforma y/o rehabilitación",
+      "Cambios de cubierta",
+      "Piscinas",
+    ],
+    icon: "fa-solid fa-diagram-project",
+  },
+  {
+    title: "Seguridad y salud",
+    items: [
+      "Coordinador de seguridad y salud",
+      "Redactor de estudios y salud",
+      "Revisión de presupuestos y certificaciones",
+    ],
+    icon: "fa-solid fa-helmet-safety",
+  },
 ];
 
 const SERVICES_SECOND_COL = [
   {
     title: "Informes",
     items: [
-      "Informe para la solicitud de los Fondos Next Generation Programa 3 PRTR.",
-      "Ayudas para actuaciones de rehabilitación a nivel de edificio.",
+      "Informe para la solicitud de los Fondos Next Generation",
+      "Ayudas para actuaciones de rehabilitación a nivel de edificio",
       "Mediciones y presupuestos",
       "Levantamientos sobre el estado actual",
     ],
     icon: "fa-solid fa-file",
   },
+  {
+    title: "Dirección de obra",
+    items: [
+      "Director de ejecución de obra.",
+      "Revisión presupuestos y certificaciones",
+      "Control de calidad de la obra",
+    ],
+    icon: "fa-solid fa-person-digging",
+  },
+  
 ];
 
 const projects = await getCollection("projects");
@@ -51,7 +79,7 @@ const projects = await getCollection("projects");
     title="Nuestros servicios"
     styleClass="flex-col px-0 py-[7rem]"
   >
-    <div class="flex flex-wrap gap-[5rem] items-center">
+    <div class="flex flex-wrap gap-[3rem] md:gap-[5rem] items-center">
       <div class="flex flex-col gap-[3rem] flex-1">
         {
           SERVICES_FIRST_COL.map((service) => {
