@@ -1,0 +1,15 @@
+---
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="flex flex-col text-xl gap-[1.5rem] text-white">
+  <span>
+    {t("contact.mainDescription")}
+  </span>
+  <span> conamba.aparejadores@gmail.com </span>
+  <span> 630 360 927 </span>
+  <span> {t("contact.disponibility")}</span>
+</div>

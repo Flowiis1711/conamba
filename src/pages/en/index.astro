@@ -8,11 +8,11 @@ import Service from "@components/Service.astro";
 import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
-const services = await getCollection("services", ({ id }) =>
-  id.startsWith("es/")
-);
 const projects = await getCollection("projects", ({ id }) =>
-  id.startsWith("es/")
+  id.startsWith("en/")
+);
+const services = await getCollection("services", ({ id }) =>
+  id.startsWith("en/")
 );
 
 const servicesLeft = services.filter(
@@ -24,20 +24,20 @@ const servicesRight = services.filter(
 ---
 
 <Layout
-  lang="es"
+  lang="en"
   title="Conamba - Aparejadores"
-  description="Conamba - Consultores Ambientales de Baleares - Aparejadores"
+  description="Conamba - Environmental Consultants of the Balearic Islands - Quantity Surveyors"
 >
   <header
     class="flex flex-col items-center h-screen w-full bg-[url('/header-img.jpeg')] bg-no-repeat bg-right bg-cover bg-fixed"
   >
     <Nav />
     <h1 class="mt-12 text-7xl text-white uppercase">Conamba</h1>
-    <h2 class="text-4xl text-white uppercase">Aparejadores</h2>
+    <h2 class="text-4xl text-white uppercase">Quantity Surveyors</h2>
   </header>
   <Section
     id="services"
-    title="Nuestros servicios"
+    title="Our services"
     styleClass="flex-col px-0 py-[7rem]"
   >
     <div class="flex flex-wrap gap-[3rem] md:gap-[5rem] items-center">
@@ -64,7 +64,7 @@ const servicesRight = services.filter(
   />
   <Section
     id="projects"
-    title="Nuestros últimos proyectos"
+    title="Our last projects"
     styleClass="flex-col px-0 py-[7rem]"
   >
     <div class="w-full flex flex-wrap justify-between gap-8">
@@ -86,10 +86,10 @@ const servicesRight = services.filter(
       }
     </div>
     <a
-      href="/projects"
+      href="/en/projects"
       class="max-w-[200px] bg-transparent text-white text-center font-bold py-2 px-5 border-2 border-customGreen w-[90%] mx-auto text-[1.3em] cursor-pointer hover:bg-customGreen hover:text-black"
     >
-      VER MÁS
+      VIEW MORE
     </a>
   </Section>
   <Parallax
@@ -97,7 +97,7 @@ const servicesRight = services.filter(
   />
   <Section
     id="contact"
-    title="Contáctanos"
+    title="Contact us"
     styleClass="flex-col md:flex-row py-[7rem]"
   >
     <Contact />
