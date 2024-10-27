@@ -9,6 +9,7 @@ export const showDefaultLang = false;
 
 export const ui = {
   en: {
+    "subtitle":"Quantity Surveyors",
     "languages.es":"Spanish",
     "languages.en":"English",
     "languages.ca":"Catalan",
@@ -25,6 +26,7 @@ export const ui = {
       "contact.disponibility": "Availability throughout the island of Mallorca."
   },
   es: {
+    "subtitle":"Aparejadores",
     "languages.es":"Español",
     "languages.en":"Inglés",
     "languages.ca":"Catalán",
@@ -41,6 +43,7 @@ export const ui = {
       "contact.disponibility": "Disponibilidad por toda la isla de Mallorca."
   },
   ca: {
+    "subtitle":"Apareadors",
     "languages.es":"Espanyol",
     "languages.en":"Anglès",
     "languages.ca":"Català",

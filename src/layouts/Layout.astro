@@ -1,4 +1,6 @@
 ---
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+
 interface Props {
   title: string;
   description: string;
@@ -6,6 +8,8 @@ interface Props {
 }
 
 const { title, description, lang } = Astro.props;
+const langUrl = getLangFromUrl(Astro.url);
+const t = useTranslations(langUrl);
 ---
 
 <!doctype html>
@@ -22,8 +26,8 @@ const { title, description, lang } = Astro.props;
   </head>
   <body class="flex flex-col min-h-screen font-franklin relative">
       <slot />
-      <footer class="bg-customGreen w-full p-6 text-center mt-auto font-semibold">
-        CONAMBA - APAREJADORES
+      <footer class="bg-customGreen w-full p-6 text-center mt-auto font-semibold uppercase text-xl">
+        CONAMBA - {t('subtitle')}
       </footer>
   </body>
 </html>
