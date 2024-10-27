@@ -2,7 +2,7 @@
 import Contact from "@components/Contact.astro";
 import Nav from "@components/Nav.astro";
 import Parallax from "@components/Parallax.astro";
-import Project from "@components/Project.astro";
+import ProjectCard from "@components/ProjectCard.astro";
 import Section from "@components/Section.astro";
 import Service from "@components/Service.astro";
 import Layout from "@layouts/Layout.astro";
@@ -74,7 +74,7 @@ const servicesRight = services.filter(
           const { title, mainImage } = data;
           if (index < 3) {
             return (
-              <Project
+              <ProjectCard
                 name={title}
                 img={mainImage.url}
                 altImg={mainImage.description}

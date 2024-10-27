@@ -9,6 +9,9 @@ export const showDefaultLang = false;
 
 export const ui = {
   en: {
+    "languages.es":"Spanish",
+    "languages.en":"English",
+    "languages.ca":"Catalan",
     "nav.services": "Services",
     "nav.projects": "Projects",
     "nav.contact": "Contact",
@@ -17,6 +20,9 @@ export const ui = {
       "contact.disponibility": "Availability throughout the island of Mallorca."
   },
   es: {
+    "languages.es":"Español",
+    "languages.en":"Inglés",
+    "languages.ca":"Catalán",
     "nav.services": "Servicios",
     "nav.projects": "Proyectos",
     "nav.contact": "Contacto",
@@ -25,6 +31,9 @@ export const ui = {
       "contact.disponibility": "Disponibilidad por toda la isla de Mallorca."
   },
   ca: {
+    "languages.es":"Espanyol",
+    "languages.en":"Anglès",
+    "languages.ca":"Català",
     "nav.services": "Serveis",
     "nav.projects": "Projectes",
     "nav.contact": "Contacte",

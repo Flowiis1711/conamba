@@ -1,5 +1,6 @@
 ---
 import { getLangFromUrl, useTranslatedPath, useTranslations } from "@i18n/utils";
+import LanguagePicker from "./LanguagePicker.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -16,6 +17,7 @@ const translatePath = useTranslatedPath(lang);
     />
   </a>
   <ul id="main-menu" class="main-menu">
+  <LanguagePicker/>
     <a
       id="logo-item"
       class="invisible absolute top-[5rem] left-[2rem]"
@@ -200,7 +202,7 @@ const translatePath = useTranslatedPath(lang);
     transform-origin: 0;
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1024px) {
     .main-nav {
       padding: 0 1rem;
       justify-content: space-between;
@@ -230,13 +232,13 @@ const translatePath = useTranslatedPath(lang);
 
     .main-menu__item {
       width: 230px;
-      text-align: center;
+      text-align: left;
       padding: 2rem;
       border-bottom: 2px solid var(--light-color);
     }
   }
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 1024px) {
     .icon-menu-container {
       visibility: hidden;
       width: 0px;

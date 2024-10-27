@@ -2,6 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import Nav from "@components/Nav.astro";
+import Splider from "@components/Splider.astro";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -46,24 +47,7 @@ const { title, location, startYear, endYear, sponsor, images, mainImage } =
         <span class="font-semibold">Patrocinador: </span>
         <span>{sponsor}</span>
       </div>
-      <section
-        class="splide w-full mx-auto mt-[2rem] md:mt-[3rem]"
-        aria-label="Galería imágenes"
-      >
-        <div class="splide__track">
-          <ul class="splide__list">
-            {
-              images.map((image) => {
-                return (
-                  <li class="splide__slide">
-                    <img class="h-full cover" src={`/projects${image.url}`} />
-                  </li>
-                );
-              })
-            }
-          </ul>
-        </div>
-      </section>
+      <Splider images={images}/>
     </div>
   </div>
   <div
