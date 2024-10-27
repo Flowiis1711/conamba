@@ -1,11 +1,13 @@
 ---
 import Nav from "@components/Nav.astro";
-import Project from "@components/Project.astro";
+import ProjectCard from "@components/ProjectCard.astro";
 import Section from "@components/Section.astro";
 import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
-const projects = await getCollection("projects");
+const projects = await getCollection("projects", ({ id }) =>
+  id.startsWith("en/")
+);
 ---
 
 <Layout
@@ -23,13 +25,14 @@ const projects = await getCollection("projects");
       {
         projects.map((project) => {
           const { slug, data } = project;
-          const { title, mainImage } = data;
+          const { title, mainImage, shortName } = data;
           return (
-            <Project
+            <ProjectCard
               name={title}
               img={mainImage.url}
               altImg={mainImage.description}
               slug={slug}
+              shortName={shortName}
             />
           );
         })

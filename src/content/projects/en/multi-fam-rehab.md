@@ -1,6 +1,6 @@
 ---
-shortName: rehabilitacion-edificio-plurifamiliar
-title: Rehabilitación edificio plurifamiliar entre medianeras
+shortName: multi-fam-rehab
+title: Rehabilitation of a multi-family building between party walls
 location: C/ Andrea Doria, Nº6 y C/ Can Baró, Nº3
 startYear: 2022
 endYear: 2023

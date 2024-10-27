@@ -1,7 +1,8 @@
 import { defineCollection, z } from "astro:content";
 
-const projectObject = {
+const projects = defineCollection({
   schema: z.object({
+    shortName: z.string(),
     title: z.string(),
     location: z.string(),
     startYear: z.number(),
@@ -18,19 +19,15 @@ const projectObject = {
       })
     ),
   }),
-};
+});
 
-const projects = defineCollection(projectObject);
-
-const serviceObject = {
+const services = defineCollection({
   schema: z.object({
     title: z.string(),
     content: z.array(z.string()),
     icon: z.string(),
     column: z.string(),
   }),
-};
-
-const services = defineCollection(serviceObject);
+});
 
 export const collections = { projects, services };

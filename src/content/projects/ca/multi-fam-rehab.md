@@ -1,6 +1,6 @@
 ---
-shortName: rehabilitacion-edificio-plurifamiliar
-title: Rehabilitación edificio plurifamiliar entre medianeras
+shortName: rehabilitacio-edifici-plurifamiliar
+title: Rehabilitació edifici plurifamiliar entre mitgeres
 location: C/ Andrea Doria, Nº6 y C/ Can Baró, Nº3
 startYear: 2022
 endYear: 2023

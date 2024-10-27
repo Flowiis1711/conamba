@@ -1,6 +1,6 @@
 ---
-shortName: 16-viviendas-pareadas
-title: 16 Viviendas unifamiliares pareadas, viviendas prefabricadas
+shortName: 16-semi-detached
+title: 16 Semi-detached single-family homes, prefabricated homes
 location: C/ del Ropit Nº1-7, C/ de l’Oronella Nº2-8 y C/ del Falcó, Llucmajor
 startYear: 2022
 endYear: 2024

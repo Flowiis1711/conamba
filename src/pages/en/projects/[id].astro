@@ -2,11 +2,12 @@
 import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import Nav from "@components/Nav.astro";
+import ProjectDetail from "@components/ProjectDetail.astro";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
   return projects.map((project) => ({
-    params: { id: project.slug },
+    params: { id: project.data.shortName  },
     props: { project },
   }));
 }
@@ -23,73 +24,17 @@ const { title, location, startYear, endYear, sponsor, images, mainImage } =
   lang="en"
 >
   <Nav />
-  <div
-    class="bg-white py-[2rem] px-2 w-11/12 m-auto my-5 max-w-screen-lg md:w-10/12 md:py-[4rem] md:px-[2rem] md:my-20"
-  >
-    <div class="m-auto w-11/12 flex flex-col md:w-[10/12]">
-      <h1 class="text-2xl font-semibold uppercase mb-[2rem] md:text-4xl">
-        {title}
-      </h1>
-      <div class="flex gap-2 text-lg">
-        <span class="font-semibold">Ubicación: </span>
-        <span>{location}</span>
-      </div>
-      <div class="flex gap-2 text-lg">
-        <span class="font-semibold">Año inicio: </span>
-        <span>{startYear}</span>
-      </div>
-      <div class="flex gap-2 text-lg">
-        <span class="font-semibold">Año finalización: </span>
-        <span>{endYear}</span>
-      </div>
-      <div class="flex gap-2 text-lg">
-        <span class="font-semibold">Patrocinador: </span>
-        <span>{sponsor}</span>
-      </div>
-      <section
-        class="splide w-full mx-auto mt-[2rem] md:mt-[3rem]"
-        aria-label="Galería imágenes"
-      >
-        <div class="splide__track">
-          <ul class="splide__list">
-            {
-              images.map((image) => {
-                return (
-                  <li class="splide__slide">
-                    <img class="h-full cover" src={`/projects${image.url}`} />
-                  </li>
-                );
-              })
-            }
-          </ul>
-        </div>
-      </section>
-    </div>
-  </div>
+  <ProjectDetail
+    title={title}
+    location={location}
+    startYear={startYear}
+    endYear={endYear}
+    sponsor={sponsor}
+    images={images}
+  />
   <div
     class="w-full absolute bottom-0 left-0 h-3/6 -z-10"
     style={`background-image:url('/projects${mainImage.url}'); background-size: cover;`}
   >
   </div>
 </Layout>
-
-<script>
-  import "@splidejs/splide/css";
-  import Splide from "@splidejs/splide";
-  document.addEventListener("DOMContentLoaded", function () {
-    var splide = new Splide(".splide", {
-      perMove: 1,
-      perPage: 2,
-      gap: ".5rem",
-      drag: true,
-      rewind: true,
-      breakpoints: {
-        768: {
-          perPage: 1,
-          gap: 0,
-        },
-      },
-    });
-    splide.mount();
-  });
-</script>

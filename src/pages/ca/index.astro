@@ -22,6 +22,10 @@ const servicesLeft = services.filter(
 const servicesRight = services.filter(
   (service) => service.data.column === "right"
 );
+
+const sortedProjects = projects.sort((projectA, projectB) => {
+  return projectB.data.endYear - projectA.data.endYear;
+});
 ---
 
 <Layout
@@ -65,14 +69,14 @@ const servicesRight = services.filter(
   />
   <Section
     id="projects"
-    title="Els nostres projectes"
+    title="Els nostres darrers projectes"
     styleClass="flex-col px-0 py-[7rem]"
   >
     <div class="w-full flex flex-wrap justify-between gap-8">
       {
-        projects.map((project, index) => {
+        sortedProjects.map((project, index) => {
           const { slug, data } = project;
-          const { title, mainImage } = data;
+          const { title, mainImage, shortName } = data;
           if (index < 3) {
             return (
               <ProjectCard
@@ -80,6 +84,7 @@ const servicesRight = services.filter(
                 img={mainImage.url}
                 altImg={mainImage.description}
                 slug={slug}
+                shortName={shortName}
               />
             );
           }
@@ -94,7 +99,7 @@ const servicesRight = services.filter(
     </a>
   </Section>
   <Parallax
-    imageBackground="bg-[url(/projects/5-star-hotel-rehab/IMG_5126.JPG)]"
+    imageBackground="bg-[url(/projects/multi-fam-rehab/IMG_20220816_104253.JPG)]"
   />
   <Section
     id="contact"

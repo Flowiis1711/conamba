@@ -1,10 +1,10 @@
 ---
-shortName: vivienda-aislada-piscina
-title: Vivienda unifamiliar aislada y piscina
-location: Vía Cornisa 51, Calviá
+shortName: habitatge-aillat-piscina
+title: Habitatge unifamiliar aïllat i piscina
+location: Via Cornisa 51, Calvià
 startYear: 2022
 endYear: 2023
-sponsor: Calviá Country Club
+sponsor: Calvià Country Club
 mainImage: 
   url: /single-house-pool/IMG_4938.JPG
   description: ""

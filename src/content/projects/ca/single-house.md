@@ -1,6 +1,6 @@
 ---
-shortName: vivienda-aislada
-title: Vivienda unifamiliar aislada
+shortName: habitatge-aillat
+title: Habitatge unifamiliar aïllat
 location: C/ San Bartolomé, Nº2, Cas Català
 startYear: 2022
 endYear: 2023

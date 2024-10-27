@@ -1,6 +1,6 @@
 ---
-shortName: vivienda-aislada-piscina
-title: Vivienda unifamiliar aislada y piscina
+shortName: single-house-pool
+title: Detached single-family home and pool
 location: Vía Cornisa 51, Calviá
 startYear: 2022
 endYear: 2023

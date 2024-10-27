@@ -1,6 +1,6 @@
 ---
-shortName: vivienda-aislada
-title: Vivienda unifamiliar aislada
+shortName: single-house
+title: Detached single-family home
 location: C/ San Bartolomé, Nº2, Cas Català
 startYear: 2022
 endYear: 2023

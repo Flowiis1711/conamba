@@ -1,14 +1,18 @@
 ---
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+
 interface Image {
   url: string;
   description?: string | undefined;
 }
 const { images } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section
   class="splide w-full mx-auto mt-[2rem] md:mt-[3rem]"
-  aria-label="Galería imágenes"
+  aria-label={t("splider.ariaLabel")}
 >
   <div class="splide__track">
     <ul class="splide__list">
@@ -24,3 +28,24 @@ const { images } = Astro.props;
     </ul>
   </div>
 </section>
+
+<script>
+  import "@splidejs/splide/css";
+  import Splide from "@splidejs/splide";
+  document.addEventListener("DOMContentLoaded", function () {
+    var splide = new Splide(".splide", {
+      perMove: 1,
+      perPage: 2,
+      gap: ".5rem",
+      drag: true,
+      rewind: true,
+      breakpoints: {
+        768: {
+          perPage: 1,
+          gap: 0,
+        },
+      },
+    });
+    splide.mount();
+  });
+</script>
