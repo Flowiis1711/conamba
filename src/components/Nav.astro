@@ -1,5 +1,9 @@
 ---
-import { getLangFromUrl, useTranslatedPath, useTranslations } from "@i18n/utils";
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "@i18n/utils";
 import LanguagePicker from "./LanguagePicker.astro";
 
 const lang = getLangFromUrl(Astro.url);
@@ -8,7 +12,7 @@ const translatePath = useTranslatedPath(lang);
 ---
 
 <nav id="main-nav" class="main-nav">
-  <a href={translatePath('/')} >
+  <a title={t("nav.goToHome")} href={translatePath("/")}>
     <img
       id="main-logo"
       class="main-logo"
@@ -17,22 +21,35 @@ const translatePath = useTranslatedPath(lang);
     />
   </a>
   <ul id="main-menu" class="main-menu">
-  <LanguagePicker/>
+    <LanguagePicker />
     <a
+      title={t("nav.goToHome")}
       id="logo-item"
       class="invisible absolute top-[5rem] left-[2rem]"
-      href={translatePath('/')} 
+      href={translatePath("/")}
     >
       <img class="menu-logo" src="/conamba-logo.png" alt="Logo CONAMBA" />
     </a>
     <li class="main-menu__item text-white text-3xl">
-      <a href={translatePath('/#services')}  class="main-menu__link">{t('nav.services')}</a>
+      <a
+        title={t("nav.goToServices")}
+        href={translatePath("/#services")}
+        class="main-menu__link">{t("nav.services")}</a
+      >
     </li>
     <li class="main-menu__item text-white text-3xl">
-      <a href={translatePath('/#projects')}  class="main-menu__link">{t('nav.projects')}</a>
+      <a
+        title={t("nav.goToProjects")}
+        href={translatePath("/#projects")}
+        class="main-menu__link">{t("nav.projects")}</a
+      >
     </li>
     <li class="main-menu__item text-white text-3xl">
-      <a href={translatePath('/#contact')}  class="main-menu__link">{t('nav.contact')}</a>
+      <a
+        title={t("nav.goToContact")}
+        href={translatePath("/#contact")}
+        class="main-menu__link">{t("nav.contact")}</a
+      >
     </li>
   </ul>
   <div id="icon-menu-container" class="icon-menu-container">

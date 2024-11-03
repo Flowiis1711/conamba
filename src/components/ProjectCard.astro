@@ -1,5 +1,10 @@
 ---
-const { name, img, altImg, slug, shortName } = Astro.props;
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+
+const { name, img, altImg, shortName } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="project relative cursor-pointer w-[100%] md:w-[30%]">
@@ -8,6 +13,7 @@ const { name, img, altImg, slug, shortName } = Astro.props;
     <img class="project-img" src={`/projects${img}.jpg`} alt={altImg} />
   </picture>
   <a
+    title={`${t("project.detail")} - ${name}`}
     class="project-name text-3xl md:text-xl lg:text-3xl"
     href={`projects/${shortName}`}
     class="text-center">{name}</a

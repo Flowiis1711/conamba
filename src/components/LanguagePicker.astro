@@ -14,19 +14,19 @@ const translatePath = useTranslatedPath(lang);
   class="flex gap-5 absolute bottom-20 lg:right-4 lg:top-10 max-h-14 px-8"
 >
   <li>
-    <a class="block text-center" href={translatePath("/", "es")}>
+    <a title={t("languages.changeEs")}  class="block text-center" href={translatePath("/", "es")}>
       <img class="w-[50px] h-[30px] rounded-full" src="/es.svg" alt="Español" />
       <span>{t("languages.es")}</span>
     </a>
   </li>
   <li>
-    <a class="block text-center" href={translatePath("/", "en")}>
+    <a title={t("languages.changeEn")} class="block text-center" href={translatePath("/", "en")}>
       <img class="w-[50px] h-[30px] rounded-full" src="/en.svg" alt="Inglés" />
       <span>{t("languages.en")}</span>
     </a>
   </li>
   <li>
-    <a class="block text-center" href={translatePath("/", "ca")}>
+    <a title={t("languages.changeCa")} class="block text-center" href={translatePath("/", "ca")}>
       <img class="w-[50px] h-[30px] rounded-full" src="/ca.svg" alt="Catalán" />
       <span>{t("languages.ca")}</span>
     </a>
