@@ -6,17 +6,18 @@ startYear: 2023
 endYear: 2025
 sponsor: Vibelba S.L.U.
 mainImage: 
-  url: /son-xigala-rehab/IMG_20240812_094704.jpg
+  url: /son-xigala-rehab/7_1_batcheditor_fotor
+  urlhd: /son-xigala-rehab/7_1_batcheditor_fotor_main
   description: ""
 images:
-  - url: /son-xigala-rehab/IMG_20240722_095935.jpg
+  - url: /son-xigala-rehab/7_1_batcheditor_fotor
     description: ""
-  - url: /son-xigala-rehab/IMG_20240812_094704.jpg
+  - url: /son-xigala-rehab/7_2_batcheditor_fotor
     description: ""
-  - url: /son-xigala-rehab/IMG_20240826_093017.jpg
+  - url: /son-xigala-rehab/7_3_batcheditor_fotor
     description: ""
-  - url: /son-xigala-rehab/IMG_20240902_101008.jpg
+  - url: /son-xigala-rehab/7_4_batcheditor_fotor
     description: ""
-  - url: /son-xigala-rehab/IMG_20240930_095026.jpg
+  - url: /son-xigala-rehab/7_5_batcheditor_fotor
     description: ""
 ---

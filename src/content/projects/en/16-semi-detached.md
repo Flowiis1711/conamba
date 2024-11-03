@@ -6,17 +6,18 @@ startYear: 2022
 endYear: 2024
 sponsor: AEDAS HOMES
 mainImage: 
-  url: /16-semi-detached/IMG_20220706_103344.jpg
+  url: /16-semi-detached/4_1_batcheditor_fotor
+  urlhd: /16-semi-detached/4_1_batcheditor_fotor_main
   description: ""
 images:
-  - url: /16-semi-detached/IMG_20220706_103344.jpg
+  - url: /16-semi-detached/4_1_batcheditor_fotor
     description: ""
-  - url: /16-semi-detached/IMG_20220713_094334.jpg
+  - url: /16-semi-detached/4_2_batcheditor_fotor
     description: ""
-  - url: /16-semi-detached/IMG_20220727_180938.jpg
+  - url: /16-semi-detached/4_3_batcheditor_fotor
     description: ""
-  - url: /16-semi-detached/IMG_20231121_092020.jpg
+  - url: /16-semi-detached/4_4_batcheditor_fotor
     description: ""
-  - url: /16-semi-detached/IMG_20231121_093559.jpg
+  - url: /16-semi-detached/4_5_batcheditor_fotor
     description: ""
 ---

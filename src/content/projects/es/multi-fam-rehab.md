@@ -6,17 +6,18 @@ startYear: 2022
 endYear: 2023
 sponsor: AEDAS HOMES
 mainImage: 
-  url: /multi-fam-rehab/IMG_4864.JPG
+  url: /multi-fam-rehab/1_1_batcheditor_fotor
+  urlhd: /multi-fam-rehab/1_1_batcheditor_fotor_main
   description: ""
 images:
-  - url: /multi-fam-rehab/IMG_4864.JPG
+  - url: /multi-fam-rehab/1_1_batcheditor_fotor
     description: ""
-  - url: /multi-fam-rehab/IMG_5229.JPG
+  - url: /multi-fam-rehab/1_2_batcheditor_fotor
     description: ""
-  - url: /multi-fam-rehab/IMG_20220718_103713.jpg
+  - url: /multi-fam-rehab/1_3_batcheditor_fotor
     description: ""
-  - url: /multi-fam-rehab/IMG_20220816_104253.JPG
+  - url: /multi-fam-rehab/1_4_batcheditor_fotor
     description: ""
-  - url: /multi-fam-rehab/IMG_20221020_114550.JPG
+  - url: /multi-fam-rehab/1_5_batcheditor_fotor
     description: ""
 ---

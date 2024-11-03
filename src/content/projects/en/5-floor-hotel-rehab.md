@@ -6,17 +6,18 @@ startYear: 2023
 endYear: 2024
 sponsor: Puro Group
 mainImage: 
-  url: /5-floor-hotel-rehab/IMG_20240306_092651.jpg
+  url: /5-floor-hotel-rehab/5_4_batcheditor_fotor
+  urlhd: /5-floor-hotel-rehab/5_4_batcheditor_fotor_main
   description: ""
 images:
-  - url: /5-floor-hotel-rehab/IMG_20230913_104455.jpg
+  - url: /5-floor-hotel-rehab/5_1_batcheditor_fotor
     description: ""
-  - url: /5-floor-hotel-rehab/IMG_20231102_111226.jpg
+  - url: /5-floor-hotel-rehab/5_2_batcheditor_fotor
     description: ""
-  - url: /5-floor-hotel-rehab/IMG_20240306_092651.jpg
+  - url: /5-floor-hotel-rehab/5_3_batcheditor_fotor
     description: ""
-  - url: /5-floor-hotel-rehab/IMG_20240529_102135.jpg
+  - url: /5-floor-hotel-rehab/5_4_batcheditor_fotor
     description: ""
-  - url: /5-floor-hotel-rehab/IMG_20240529_102533.jpg
+  - url: /5-floor-hotel-rehab/5_5_batcheditor_fotor
     description: ""
 ---

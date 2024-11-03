@@ -10,6 +10,7 @@ const projects = defineCollection({
     sponsor: z.string(),
     mainImage: z.object({
       url: z.string(),
+      urlhd: z.string(),
       description: z.string().optional(),
     }),
     images: z.array(

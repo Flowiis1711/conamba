@@ -6,17 +6,18 @@ startYear: 2022
 endYear: 2023
 sponsor: Cappuccino
 mainImage: 
-  url: /single-house/IMG_4847.JPG
+  url: /single-house/3_5_batcheditor_fotor
+  urlhd: /single-house/3_5_batcheditor_fotor_main
   description: ""
 images:
-  - url: /single-house/IMG_4847.JPG
+  - url: /single-house/3_1_batcheditor_fotor
     description: ""
-  - url: /single-house/IMG_20230221_114745.jpg
+  - url: /single-house/3_2_batcheditor_fotor
     description: ""
-  - url: /single-house/IMG_20230502_105954.jpg
+  - url: /single-house/3_3_batcheditor_fotor
     description: ""
-  - url: /single-house/IMG_20230926_112850.jpg
+  - url: /single-house/3_4_batcheditor_fotor
     description: ""
-  - url: /single-house/IMG_20230926_114638.jpg
+  - url: /single-house/3_5_batcheditor_fotor
     description: ""
 ---

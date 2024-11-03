@@ -20,7 +20,10 @@ const t = useTranslations(lang);
         images.map((image: Image) => {
           return (
             <li class="splide__slide">
-              <img class="h-full cover" src={`/projects${image.url}`} />
+              <picture>
+                <source srcset={`/projects${image.url}.webp`} type="image/webp" />
+                <img class="h-full cover"  src={`/projects${image.url}.jpg`} alt={image.description} loading="lazy"/>
+              </picture>
             </li>
           );
         })
