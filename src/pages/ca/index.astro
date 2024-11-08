@@ -30,83 +30,81 @@ const sortedProjects = projects.sort((projectA, projectB) => {
 
 <Layout
   lang="ca"
-  title="Conamba - Aparejadores"
-  description="Conamba - Consultors Ambientals de Balears - Apareadors"
+  title="Conamba - Aparelladors"
+  description="Conamba - Consultors Ambientals de Balears - Aparelladors. Serveis d'arquitectura tècnica a Mallorca: Redacció d'informes, ITE/IEE, taxacions, direcció d'execució d'obra, coordinació de seguretat i salut."
 >
   <header
     class="flex flex-col items-center h-screen w-full bg-[url('/header.webp')] bg-no-repeat bg-right bg-cover bg-fixed"
   >
     <Nav />
     <h1 class="mt-12 text-7xl text-white uppercase">Conamba</h1>
-    <h2 class="text-4xl text-white uppercase">Apareadors</h2>
+    <h2 class="text-4xl text-white uppercase">Aparelladors</h2>
   </header>
-  <Section
-    id="services"
-    title="Els nostres serveis"
-    styleClass="flex-col px-0 py-[7rem]"
-  >
-    <div class="flex flex-wrap gap-[3rem] md:gap-[5rem] items-center">
-      <div class="flex flex-col gap-[3rem] flex-1">
-        {
-          servicesLeft.map((service) => {
-            const { title, content, icon } = service.data;
-            return <Service title={title} items={content} icon={icon} />;
-          })
-        }
-      </div>
-      <div class="flex flex-col gap-[3rem] flex-1">
-        {
-          servicesRight.map((service) => {
-            const { title, content, icon } = service.data;
-            return <Service title={title} items={content} icon={icon} />;
-          })
-        }
-      </div>
-    </div>
-  </Section>
-  <Parallax
-    imageBackground="bg-[url(/parallax_6_5.webp)]"
-  />
-  <Section
-    id="projects"
-    title="Els nostres darrers projectes"
-    styleClass="flex-col px-0 py-[7rem]"
-  >
-    <div class="w-full flex flex-wrap justify-between gap-8">
-      {
-        sortedProjects.map((project, index) => {
-          const { slug, data } = project;
-          const { title, mainImage, shortName } = data;
-          if (index < 3) {
-            return (
-              <ProjectCard
-                name={title}
-                img={mainImage.url}
-                altImg={mainImage.description}
-                slug={slug}
-                shortName={shortName}
-              />
-            );
-          }
-        })
-      }
-    </div>
-    <a
-    title="Veure més projectes"
-    href="/ca/projects"
-      class="max-w-[200px] bg-transparent text-white text-center font-bold py-2 px-5 border-2 border-customGreen w-[90%] mx-auto text-[1.3em] cursor-pointer hover:bg-customGreen hover:text-black"
+  <main>
+    <Section
+      id="services"
+      title="Els nostres serveis"
+      styleClass="flex-col px-0 py-[7rem]"
     >
-      VEURE'N MÉS
-    </a>
-  </Section>
-  <Parallax
-    imageBackground="bg-[url(/parallax_1_2.webp)]"
-  />
-  <Section
-    id="contact"
-    title="Contacta'ns"
-    styleClass="flex-col md:flex-row py-[7rem]"
-  >
-    <Contact />
-  </Section>
+      <div class="flex flex-wrap gap-[3rem] md:gap-[5rem] items-center">
+        <div class="flex flex-col gap-[3rem] flex-1">
+          {
+            servicesLeft.map((service) => {
+              const { title, content, icon } = service.data;
+              return <Service title={title} items={content} icon={icon} />;
+            })
+          }
+        </div>
+        <div class="flex flex-col gap-[3rem] flex-1">
+          {
+            servicesRight.map((service) => {
+              const { title, content, icon } = service.data;
+              return <Service title={title} items={content} icon={icon} />;
+            })
+          }
+        </div>
+      </div>
+    </Section>
+    <Parallax imageBackground="bg-[url(/parallax_6_5.webp)]" />
+    <Section
+      id="projects"
+      title="Els nostres darrers projectes"
+      styleClass="flex-col px-0 py-[7rem]"
+    >
+      <div class="w-full flex flex-wrap justify-between gap-8">
+        {
+          sortedProjects.map((project, index) => {
+            const { slug, data } = project;
+            const { title, mainImage, shortName } = data;
+            if (index < 3) {
+              return (
+                <ProjectCard
+                  name={title}
+                  img={mainImage.url}
+                  altImg={mainImage.description}
+                  slug={slug}
+                  shortName={shortName}
+                />
+              );
+            }
+          })
+        }
+      </div>
+      <a
+        title="Veure més projectes"
+        href="/ca/projects"
+        class="max-w-[200px] bg-transparent text-white text-center font-bold py-2 px-5 border-2 border-customGreen w-[90%] mx-auto text-[1.3em] cursor-pointer hover:bg-customGreen hover:text-black"
+      >
+        VEURE'N MÉS
+      </a>
+    </Section>
+    <Parallax imageBackground="bg-[url(/parallax_1_2.webp)]" />
+    <Section
+      id="contact"
+      title="Contacta'ns"
+      styleClass="flex-col md:flex-row py-[7rem]"
+    >
+      <Contact />
+    </Section>
+  </main>
 </Layout>

@@ -1,5 +1,5 @@
 ---
-import { getLangFromUrl, useTranslations } from '@i18n/utils';
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
 
 interface Props {
   title: string;
@@ -17,18 +17,46 @@ const t = useTranslations(langUrl);
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="keywords"
+      content="consultores ambientales, consultoría ambiental, aparejadores, arquitectura técnica, Mallorca, Baleares, redacción de informes, ITE, IEE, tasaciones, dirección de obra, ejecución de obra, coordinación de seguridad y salud, servicios de arquitectura técnica, Conamba"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="icon" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link
+      rel="alternate"
+      href="https://conambaaparejadores.es/"
+      hreflang="es"
+    />
+    <link
+      rel="alternate"
+      href="https://conambaaparejadores.es/ca/"
+      hreflang="ca"
+    />
+    <link
+      rel="alternate"
+      href="https://conambaaparejadores.es/en/"
+      hreflang="en"
+    />
+
     <title>{title}</title>
+    <!-- Font Awesome with defer for better performance -->
     <script
       src="https://kit.fontawesome.com/dc5b08e529.js"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+      defer></script>
   </head>
   <body class="flex flex-col min-h-screen font-franklin relative">
-      <slot />
-      <footer class="bg-customGreen w-full p-6 text-center mt-auto font-semibold uppercase text-xl">
-        CONAMBA - {t('subtitle')}
-      </footer>
+    <slot />
+    <footer
+      role="contentinfo"
+      class="bg-customGreen w-full p-6 text-center mt-auto font-semibold uppercase text-xl"
+    >
+      <p>CONAMBA - {t("subtitle")}</p>
+    </footer>
   </body>
 </html>
 <style is:global>
