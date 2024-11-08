@@ -1,0 +1,11 @@
+# Bloquea el acceso a todos los bots en la carpeta /admin y /scripts
+User-agent: *
+Disallow: /admin/
+Disallow: /scripts/
+
+# Permite el acceso a todo el resto del sitio
+User-agent: *
+Allow: /
+
+# Indica la ubicación del sitemap
+Sitemap: https://conambaaparejadores.com/sitemap.xml
