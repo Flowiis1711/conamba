@@ -8,4 +8,4 @@ User-agent: *
 Allow: /
 
 # Indica la ubicación del sitemap
-Sitemap: https://conambaaparejadores.com/sitemap.xml
+Sitemap: https://conambaaparejadores.es/sitemap.xml
