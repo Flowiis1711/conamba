@@ -32,7 +32,7 @@ export const ui = {
     "splider.ariaLabel": "Images gallery",
     "contact.mainDescription":
       "For any questions, requests or fee quotes, you can contact us via email or phone number:",
-    "contact.disponibility": "Availability throughout the island of Mallorca.",
+    "contact.disponibility": "Availability throughout the peninsula and Balearic Islands.",
     "contact.mailTitle": "Open mail",
     "contact.phoneTitle": "Open phone",
   },
@@ -60,7 +60,7 @@ export const ui = {
     "splider.ariaLabel": "Galería de imágenes",
     "contact.mainDescription":
       "Para cualquier consulta, petición o solicitud de presupuesto de honorarios, puede contactarnos a través del correo electrónico o número de teléfono:",
-    "contact.disponibility": "Disponibilidad por toda la isla de Mallorca.",
+    "contact.disponibility": "Disponibilidad por la península y en las Islas Baleares.",
     "contact.mailTitle": "Abre el correo",
     "contact.phoneTitle": "Abre el teléfono",
   },
@@ -88,7 +88,7 @@ export const ui = {
     "splider.ariaLabel": "Galeria d'imatges",
     "contact.mainDescription":
       "Per qualsevol consulta, petició o sol·licitud de pressupost d'honoraris, podeu contactar-nos a través del correu electrònic o número de telèfon:",
-    "contact.disponibility": "Disponibilitat per tota la illa de Mallorca.",
+    "contact.disponibility": "Disponibilitat per la peninsula i les Illes Balears.",
     "contact.mailTitle": "Obri el correu",
     "contact.phoneTitle": "Obre el telèfon",
   },
