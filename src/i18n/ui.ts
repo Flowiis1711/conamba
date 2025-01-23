@@ -56,7 +56,7 @@ export const ui = {
     "project.location": "Ubicación",
     "project.startYear": "Año inicio",
     "project.endYear": "Año finalización",
-    "project.sponsor": "Patrocinador",
+    "project.sponsor": "Promotor",
     "splider.ariaLabel": "Galería de imágenes",
     "contact.mainDescription":
       "Para cualquier consulta, petición o solicitud de presupuesto de honorarios, puede contactarnos a través del correo electrónico o número de teléfono:",
@@ -84,7 +84,7 @@ export const ui = {
     "project.location": "Ubicació",
     "project.startYear": "Any inici",
     "project.endYear": "Any finalització",
-    "project.sponsor": "Patrocinador",
+    "project.sponsor": "Promotor",
     "splider.ariaLabel": "Galeria d'imatges",
     "contact.mainDescription":
       "Per qualsevol consulta, petició o sol·licitud de pressupost d'honoraris, podeu contactar-nos a través del correu electrònic o número de telèfon:",
