@@ -28,7 +28,7 @@ export const ui = {
     "project.location": "Location",
     "project.startYear": "Start year",
     "project.endYear": "End year",
-    "project.sponsor": "Sponsor",
+    "project.sponsor": "Promoter",
     "splider.ariaLabel": "Images gallery",
     "contact.mainDescription":
       "For any questions, requests or fee quotes, you can contact us via email or phone number:",
