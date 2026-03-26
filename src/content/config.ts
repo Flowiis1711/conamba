@@ -6,7 +6,7 @@ const projects = defineCollection({
     title: z.string(),
     location: z.string(),
     startYear: z.number(),
-    endYear: z.number(),
+    endYear: z.union([z.number(), z.string()]),
     sponsor: z.string(),
     mainImage: z.object({
       url: z.string(),

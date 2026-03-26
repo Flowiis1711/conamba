@@ -5,9 +5,9 @@ import Section from "@components/Section.astro";
 import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
-const projects = await getCollection("projects", ({ id }) =>
-  id.startsWith("es/")
-);
+const projects = (await getCollection("projects", ({ id }) =>
+    id.startsWith("es/")
+)).sort((a, b) => b.data.startYear - a.data.startYear);
 ---
 
 <Layout
